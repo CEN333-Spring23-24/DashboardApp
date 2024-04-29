@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { MContainerComponent } from '../../m-framework/m-container/m-container.component';
 import { MCardComponent } from '../../m-framework/m-card/m-card.component';
 import { MAnalogOutputComponent } from '../../m-framework/m-analog-output/m-analog-output.component';
-
+import { MMeterComponent } from '../../m-framework/m-meter/m-meter.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MContainerComponent,MCardComponent,MAnalogOutputComponent],
+  imports: [MContainerComponent,MCardComponent,MAnalogOutputComponent, MMeterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
