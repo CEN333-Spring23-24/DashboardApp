@@ -1,6 +1,51 @@
-<m-container>
-  <m-analog-output [canvasWidth]="20" Type="servo" Level="{{level}}"></m-analog-output>
-  <m-analog-output [canvasWidth]="20" Type="motor" Level="{{level}}"></m-analog-output>
-  <m-analog-output [canvasWidth]="5" Type="led" Level="{{level}}"></m-analog-output>
-  <m-meter [value]="70" [unit]="'km/h'" [min]="0" [max]="100"></m-meter>
+<m-container class="pure-g">
+  
+  <m-card header="Servo" subheader="Angle">
+    <button class="pure-button" (click)="levelup()"> Level Up</button>
+    <m-analog-output class="pure-u-1-2" [canvasWidth]="100" Type="servo" Level="{{level}}"></m-analog-output>
+    <div class="pure-u-1-2">
+      <p> A servo motor is a rotary actuator that allows for precise control of angular position.
+       It consists of a motor coupled to a sensor for position feedback. 
+       It also requires a servo drive to complete the system. 
+       The drive uses the feedback sensor to precisely control the rotary position of the motor.
+      </p>
+    </div>
+  </m-card>
+  
+  <m-card header="Motor" subheader="Speed">
+    <button class="pure-button" (click)="levelup()"> Level Up</button>
+    <m-analog-output class="pure-u-1-2" [canvasWidth]="100" Type="motor" Level="{{level}}"></m-analog-output>
+    <div class="pure-u-1-2">
+      <p> A servo motor is a rotary actuator that allows for precise control of angular position.
+       It consists of a motor coupled to a sensor for position feedback. 
+       It also requires a servo drive to complete the system. 
+       The drive uses the feedback sensor to precisely control the rotary position of the motor.
+      </p>
+    </div>
+  </m-card>
+  
+  <m-card header="LED" subheader="Intensity">
+    <button class="pure-button" (click)="levelup()"> Level Up</button>
+    <m-analog-output class="pure-u-1-2" [canvasWidth]="20" Type="led" Level="{{level}}"></m-analog-output>
+    <div class="pure-u-1-2">
+      <p> A servo motor is a rotary actuator that allows for precise control of angular position.
+       It consists of a motor coupled to a sensor for position feedback. 
+       It also requires a servo drive to complete the system. 
+       The drive uses the feedback sensor to precisely control the rotary position of the motor.
+      </p>
+    </div>
+  </m-card>
+  
+  <m-card header="Servo" subheader="Angle">
+    <button class="pure-button" (click)="levelup()"> Level Up</button>
+    <m-meter class="pure-u-1-2" [value]="70" [unit]="'km/h'" [min]="0" [max]="100"></m-meter>
+    <div class="pure-u-1-2">
+      <p> A servo motor is a rotary actuator that allows for precise control of angular position.
+       It consists of a motor coupled to a sensor for position feedback. 
+       It also requires a servo drive to complete the system. 
+       The drive uses the feedback sensor to precisely control the rotary position of the motor.
+      </p>
+    </div>
+  </m-card>
+
 </m-container>

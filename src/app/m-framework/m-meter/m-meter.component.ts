@@ -30,7 +30,8 @@ export class MMeterComponent implements OnInit{
         plotBackgroundImage: null,
         plotBorderWidth: 0,
         plotShadow: false,
-        height: '100%'
+        height: '100%',
+        backgroundColor: "rgb(235,241,242)"
     },
     title: {
       text: ''

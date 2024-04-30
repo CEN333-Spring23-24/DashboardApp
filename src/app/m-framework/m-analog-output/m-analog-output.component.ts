@@ -12,7 +12,7 @@ export class MAnalogOutputComponent implements OnInit{
   private _canvasWidth: number = 10; // Default canvas width
   frameCount: number = 0;
   private _level: number = 0;
-
+  internalCounter: number = 0; 
   @Input()
   set Level(value: string) { // Setter for the Level property
     // Ensure that the value is between 0 and 100
@@ -67,7 +67,15 @@ export class MAnalogOutputComponent implements OnInit{
       return;
     }
     const image = new Image();
-    image.src = src+frameNumber+".jpg"; 
+    if (this._level == 0 && this.Type == "motor")
+      image.src = src+"0.jpg";
+    else if (this._level != 0 && this.Type == "motor")
+      setInterval(()=>{
+                        this.internalCounter = (this.internalCounter+1)% 48;
+                        image.src = src+this.internalCounter+".jpg";
+                      },500*(1-this._level/48));
+    else
+      image.src = src+frameNumber+".jpg"; 
     image.onload = () => {
       canvas.width = image.width;
       canvas.height = image.height;

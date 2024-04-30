@@ -15,7 +15,10 @@ export class HomeComponent {
   constructor()
   {
    this.level = "0"; 
-   setInterval(()=> {this.level = (+this.level + 1) % 100+""; console.log(this.level)},100);
+   //setInterval(()=> {this.level = (+this.level + 1) % 100+""; console.log(this.level)},100);
+  }
+  levelup(){
+    this.level = ""+(+this.level+10)%100;
   }
  }
  
