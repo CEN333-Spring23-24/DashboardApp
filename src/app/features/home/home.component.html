@@ -1,10 +1,10 @@
 <m-container class="pure-g">
   
   <m-card header="Servo" subheader="Angle">
-    <button class="pure-button" (click)="levelup()"> Level Up</button>
     <m-analog-output class="pure-u-1-2" [canvasWidth]="100" Type="servo" Level="{{level}}"></m-analog-output>
     <div class="pure-u-1-2">
-      <p> A servo motor is a rotary actuator that allows for precise control of angular position.
+      <p> 
+        A servo motor is a rotary actuator that allows for precise control of angular position.
        It consists of a motor coupled to a sensor for position feedback. 
        It also requires a servo drive to complete the system. 
        The drive uses the feedback sensor to precisely control the rotary position of the motor.
@@ -13,37 +13,33 @@
   </m-card>
   
   <m-card header="Motor" subheader="Speed">
-    <button class="pure-button" (click)="levelup()"> Level Up</button>
     <m-analog-output class="pure-u-1-2" [canvasWidth]="100" Type="motor" Level="{{level}}"></m-analog-output>
     <div class="pure-u-1-2">
-      <p> A servo motor is a rotary actuator that allows for precise control of angular position.
-       It consists of a motor coupled to a sensor for position feedback. 
-       It also requires a servo drive to complete the system. 
-       The drive uses the feedback sensor to precisely control the rotary position of the motor.
+      <p> A DC motor is an electrical motor that uses direct current (DC) to produce mechanical force. 
+        The most common types rely on magnetic forces produced by currents in the coils.
+         Nearly all types of DC motors have some internal mechanism, either electromechanical or electronic, to periodically change the direction of current in part of the motor.
       </p>
     </div>
   </m-card>
   
   <m-card header="LED" subheader="Intensity">
-    <button class="pure-button" (click)="levelup()"> Level Up</button>
     <m-analog-output class="pure-u-1-2" [canvasWidth]="20" Type="led" Level="{{level}}"></m-analog-output>
     <div class="pure-u-1-2">
-      <p> A servo motor is a rotary actuator that allows for precise control of angular position.
-       It consists of a motor coupled to a sensor for position feedback. 
-       It also requires a servo drive to complete the system. 
-       The drive uses the feedback sensor to precisely control the rotary position of the motor.
+      <p> A light-emitting diode (LED) is a semiconductor device that emits light when current flows through it. 
+        Electrons in the semiconductor recombine with electron holes, releasing energy in the form of photons. 
+        The color of the light (corresponding to the energy of the photons) is determined by the energy required 
+        for electrons to cross the band gap of the semiconductor.
       </p>
     </div>
   </m-card>
   
-  <m-card header="Servo" subheader="Angle">
+  <m-card header="Meter" subheader="Voltage">
     <button class="pure-button" (click)="levelup()"> Level Up</button>
-    <m-meter class="pure-u-1-2" [value]="70" [unit]="'km/h'" [min]="0" [max]="100"></m-meter>
+    <m-meter class="pure-u-1-2" Level="{{level}}" [unit]="'V'" [min]="0" [max]="100"></m-meter>
     <div class="pure-u-1-2">
-      <p> A servo motor is a rotary actuator that allows for precise control of angular position.
-       It consists of a motor coupled to a sensor for position feedback. 
-       It also requires a servo drive to complete the system. 
-       The drive uses the feedback sensor to precisely control the rotary position of the motor.
+      <p> A voltmeter is an instrument that measures voltages of either direct or alternating electric current on a scale 
+        usually graduated in volts, millivolts (0.001 volt), or kilovolts (1,000 volts). 
+        Many voltmeters are digital, giving readings as numerical displays.
       </p>
     </div>
   </m-card>
