@@ -18,7 +18,7 @@ export class HomeComponent {
    //setInterval(()=> {this.level = (+this.level + 1) % 100+""; console.log(this.level)},100);
   }
   levelup(){
-    this.level = ""+(+this.level+10)%100;
+    this.level = ""+(+this.level+10)%110;
   }
  }
  

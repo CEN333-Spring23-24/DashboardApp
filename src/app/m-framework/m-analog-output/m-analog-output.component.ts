@@ -10,6 +10,7 @@ export class MAnalogOutputComponent implements OnInit{
   @ViewChild('canvasElement', { static: true }) canvasElement!: ElementRef<HTMLCanvasElement>;
   @Input() Type!: 'motor' | 'servo' | 'led'; 
   private _canvasWidth: number = 10; // Default canvas width
+  myInterval: any;
   frameCount: number = 0;
   private _level: number = 0;
   internalCounter: number = 0; 
@@ -68,12 +69,19 @@ export class MAnalogOutputComponent implements OnInit{
     }
     const image = new Image();
     if (this._level == 0 && this.Type == "motor")
-      image.src = src+"0.jpg";
+      {
+        image.src = src+"0.jpg";
+        clearInterval(this.myInterval);
+      }
     else if (this._level != 0 && this.Type == "motor")
-      setInterval(()=>{
-                        this.internalCounter = (this.internalCounter+1)% 48;
-                        image.src = src+this.internalCounter+".jpg";
-                      },500*(1-this._level/48));
+      {
+
+        clearInterval(this.myInterval);
+        this.myInterval = setInterval(()=>{
+                          this.internalCounter = (this.internalCounter+1)% 48;
+                          image.src = src+this.internalCounter+".jpg";
+                        },500*(1-this._level/100));
+      }
     else
       image.src = src+frameNumber+".jpg"; 
     image.onload = () => {
