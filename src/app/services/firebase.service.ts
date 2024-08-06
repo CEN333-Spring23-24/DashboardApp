@@ -15,13 +15,14 @@ export class FirebaseService {
       }
       setupFirebase(){
         const firebaseConfig = {
-          apiKey: "AIzaSyDlJibPFNnChGTttlHbokMU5cONbEyuOKs",
-          authDomain: "test-b2585.firebaseapp.com",
-          databaseURL: "https://test-b2585-default-rtdb.firebaseio.com",
-          projectId: "test-b2585",
-          storageBucket: "test-b2585.appspot.com",
-          messagingSenderId: "481311246512",
-          appId: "1:481311246512:web:4764b07947246274395375"
+          apiKey: "AIzaSyBYW3bBbSn4uzFb9wroPf01yzK_4Bdd-AU",
+          authDomain: "controlandmonitoring-eb905.firebaseapp.com",
+          databaseURL: "https://controlandmonitoring-eb905-default-rtdb.firebaseio.com",
+          projectId: "controlandmonitoring-eb905",
+          storageBucket: "controlandmonitoring-eb905.appspot.com",
+          messagingSenderId: "977115271339",
+          appId: "1:977115271339:web:a4cc4f7517e0546125e7ee",
+          measurementId: "G-WMFB0D1SXX"
         };
         
         initializeApp(firebaseConfig);
@@ -43,7 +44,9 @@ export class FirebaseService {
         else return "";
       })      
      }
-    
+     getFirebaseDatabase(){
+      return this.db;
+    }
      reset(){
         remove(ref(this.db, '/'));
      }
